@@ -8,8 +8,7 @@
    [ruse.util :as u]
    [ruse.dog :as dog]
    [ruse.fuse-dog :as fdog]
-   [ruse.pg :as pg]
-   [ruse.fuse-pg :as fpg])
+   )
   (:gen-class))
 
 (defn -main
@@ -18,5 +17,4 @@
   (let [[type dir] args]
     (cond
       (= "dog" type) (fdog/main dir)
-      (= "pg" type) (fpg/main dir)
       :else (println "Please use a known system as first arg [dog, pg]" ))))
